@@ -1,0 +1,72 @@
+{
+	// Place your snippets for cfml here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"cfdump": {
+		"prefix": "cfdump",
+		"body": [
+			"<cfdump var=\"#${1:$TM_SELECTED_TEXT}#\" abort=\"${2:boolean}\" />"
+		],
+		"description": "cfdump for tag based cfml"
+	},
+	"cfabort": {
+		"prefix": "cfabort",
+		"body": [
+			"<cfabort />"
+		],
+		"description": "cfabort for tag based cfml"
+	},
+	"cfset": {
+		"prefix": "cfset",
+		"body": [
+			"<cfset ${1:$TM_SELECTED_TEXT} = $2 />"
+		],
+		"description": "cfset for tag based cfml"
+	},
+	"cfoutput": {
+		"prefix": "cfoutput",
+		"body": [
+			"<cfoutput>${1:$TM_SELECTED_TEXT}</cfoutput>"
+		],
+		"description": "cfoutput for tag based cfml"
+	},
+
+	"writeDump": {
+		"prefix": "writeDump",
+		"body": [
+			"writeDump(${1:$TM_SELECTED_TEXT });"
+		],
+		"description": "writeDump() for script based cfml"
+	},
+	"abort": {
+		"prefix": "abort",
+		"body": [
+			"abort;"
+		],
+		"description": "abort for script based cfml"
+	},
+	"set": {
+		"prefix": "set",
+		"body": [
+			"${1:$TM_SELECTED_TEXT} = $2;"
+		],
+		"description": "cfset for script based cfml"
+	},
+	"writeOutput": {
+		"prefix": "writeOutput",
+		"body": [
+			"writeOutput(${1:$TM_SELECTED_TEXT});"
+		],
+		"description": "writeOutput for script based cfml"
+	}
+}

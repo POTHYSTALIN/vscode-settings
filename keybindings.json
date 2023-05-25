@@ -1,0 +1,222 @@
+// Place your key bindings in this file to override the defaults
+[
+	// For all tag basis, we've to use the key combination prefix as ctrl+t & then specific key as suffix
+	// For cfdump
+	{
+		"key": "ctrl+t d",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "cfml",
+			"name": "cfdump"
+		}
+	},
+	// For cfabort
+	{
+		"key": "ctrl+t a",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "cfml",
+			"name": "cfabort"
+		}
+	},
+	{
+		"key": "ctrl+t =",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "cfml",
+			"name": "cfset"
+		}
+	},
+	{
+		"key": "ctrl+t o",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"snippet": "<cfoutput>${0:$SELECTION}</cfoutput>"
+		}
+	},
+	// For cfscript
+	{
+		"key": "ctrl+t s",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"snippet": "<cfscript>${0:$SELECTION}</cfscript>"
+		}
+	},
+
+	// For all script basis, we've to use the key combination prefix as ctrl+q & then specific key as suffix
+	// For writeDump
+	{
+		"key": "ctrl+q d",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "cfml",
+			"name": "writeDump"
+		}
+	},
+	// For abort
+	{
+		"key": "ctrl+q a",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "cfml",
+			"name": "abort"
+		}
+	},
+	// For variable assignment in script
+	{
+		"key": "ctrl+q =",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "cfml",
+			"name": "set"
+		}
+	},
+	// For writeOutput
+	{
+		"key": "ctrl+q o",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "cfml",
+			"name": "writeOutput"
+		}
+	},
+
+	// For adding cfml comment in tag
+	{
+		"key": "ctrl+[Slash]",
+		"command": "cfml.toggleLineComment",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+[Slash]",
+		"command": "cfml.toggleBlockComment",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus"
+	},
+	// For cfml comment in script
+	// {
+	//     "key": "ctrl+shift+[Slash]",
+	//     "command": "editor.action.commentLine",
+	//     "when": "editorLangId == cfml && !editorReadOnly && editorTextFocus"
+	// },
+
+	// common shortcuts
+	{
+		"key": "ctrl+shift+down",
+		"command": "editor.action.moveLinesDownAction",
+		"when": "!editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "editor.action.moveLinesUpAction",
+		"when": "!editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "!editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+u",
+		"command": "editor.action.copyLinesUpAction",
+		"when": "!editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "editor.action.insertCursorAtEndOfEachLineSelected",
+		"when": "!editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+l",
+		"command": "editor.action.transformToLowercase",
+		"when": "!editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+u",
+		"command": "editor.action.transformToUppercase",
+		"when": "!editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+b",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+shift+2",
+		"command": "workbench.action.gotoSymbol"
+	},
+	{
+		"key": "ctrl+alt+p",
+		"command": "workbench.action.openWorkspace"
+	},
+
+	// CFLint - Commands
+	{
+		"key": "ctrl+l ctrl+e",
+		"command": "cflint.enable",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+l ctrl+d",
+		"command": "cflint.disable",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+l",
+		"command": "cflint.runLinter",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus"
+	},
+
+	// workspace switcher
+	{
+		"key": "ctrl+r",
+		"command": "vscodeWorkspaceSwitcher.switchWorkspace"
+	},
+	{
+		"key": "ctrl+shift+r",
+		"command": "vscodeWorkspaceSwitcher.switchWorkspaceNewWindow"
+	},
+
+	// For zeal docs
+	{
+		"key": "f1",
+		"command": "extension.dash.specific",
+		"when": "editorLangId == cfml && !editorReadOnly && editorTextFocus"
+	},
+
+	// PHP shortcuts
+	{
+		"key": "ctrl+q d",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == php && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "php",
+			"name": "var_dump"
+		}
+	},
+	{
+		"key": "ctrl+q a",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == php && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "php",
+			"name": "die"
+		}
+	},
+	{
+		"key": "ctrl+q o",
+		"command": "editor.action.insertSnippet",
+		"when": "editorLangId == php && !editorReadOnly && editorTextFocus",
+		"args": {
+			"langId": "php",
+			"name": "echo"
+		}
+	}
+]
